@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './Pages/Login';
+import Student from './Pages/Student';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -14,14 +15,11 @@ function App() {
     <Router>
       <Routes>
         {/* Conditionally render routes based on authentication */}
-        <Route path="/" element={isAuthenticated ? <Home /> : <Login isAuthenticated={isAuthenticated} onLogin={handleLogin} />} />
+        <Route path="/" element={isAuthenticated ? <Student /> : <Login isAuthenticated={isAuthenticated} onLogin={handleLogin} />} />
       </Routes>
     </Router>
   );
 }
 
-const Home = () => {
-  return <h1>Welcome to the Home Page!</h1>;
-};
 
 export default App;

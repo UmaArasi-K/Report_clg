@@ -16,7 +16,7 @@ const Login = ({ isAuthenticated, onLogin }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Simulate authentication (mock login)
-    if (email === 'test@example.com' && password === 'password') {
+    if (email === '123@gmail.com' && password === '123') {
       onLogin(); // Simulate successful login
     } else {
       setError('Invalid email or password');
